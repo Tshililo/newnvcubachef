@@ -36,7 +36,7 @@
         <!-- main content -->
         <div data-role="content">
 
-            @if (ViewBag.CuizineType == "cb")
+            @if (ViewBag.CuizineType == "CLASSIC BBQ")
             {
                 <!-- slider -->
                 <div class="slider-outer">
@@ -68,7 +68,7 @@
                 <!-- /slider -->
             }
 
-            @if (ViewBag.CuizineType == "pl")
+            @if (ViewBag.CuizineType == "PLATTERS")
             {
                 <!-- slider -->
                 <div class="slider-outer">
@@ -104,7 +104,7 @@
             <section>
                 <h2>Booking information</h2>
 
-                <input type="hidden" name="CuizineTypeId" value="@ViewBag.CuizineType" />
+                <input type="hidden" id="CuizineTypeId"  name="CuizineTypeId" value="@ViewBag.CuizineType" />
 
                 <p>
                     <label for="People">

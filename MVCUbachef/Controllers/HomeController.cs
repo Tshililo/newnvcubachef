@@ -42,6 +42,9 @@ namespace MVCUbachef.Controllers
             string EventsType = p[5];
             string CuisineType = p[6];
 
+            SendEmail(emailId, RefNo, Occasionvalue, EventsType, CuisineType);
+            SendSMS(emailId, RefNo, Occasionvalue, EventsType, CuisineType);
+
             return PartialView("Payments");
 
 
@@ -66,10 +69,10 @@ namespace MVCUbachef.Controllers
 
         //}
 
-        public void SendSMS(string PhoneNo, string RefNo, string Occasionvalue = "", string EventsType = "")
+        public void SendSMS(string PhoneNo, string RefNo, string Occasionvalue = "", string EventsType = "", string CuisineType = "")
         {
             string to, msg;
-            msg = "Dear Customer. You have Booked a Chef for Occasion: " + Occasionvalue + " for " + EventsType + " Event. RefNo:" + RefNo + ""; ;
+            msg = "Dear Customer. You have Booked a Chef for " + CuisineType +" "+ "Occasion: " + Occasionvalue + " for " + EventsType + " Event. RefNo:" + RefNo + "";
             to = PhoneNo;
             WebClient client = new WebClient();
             // Add a user agent header in case the requested URI contains a query.
@@ -88,15 +91,15 @@ namespace MVCUbachef.Controllers
 
         }
 
-        private void SendEmail(string EmailAddress, string RefNo, string Occasionvalue = "", string EventsType = "")
+        private void SendEmail(string EmailAddress, string RefNo, string Occasionvalue = "", string EventsType = "", string CuisineType = "")
         {
             MailMessage Msg = new MailMessage();
             // Sender e-mail address.
             Msg.From = new MailAddress("ubachefnoreply@gmail.com");
             // Recipient e-mail address.
             Msg.To.Add(EmailAddress);
-            Msg.Subject = "Dear Client";
-            Msg.Body = "You have Booked a Chef for Occasion: " + Occasionvalue + " for " + EventsType + " Event. RefNo" + RefNo + "";
+            Msg.Subject = "Uba Chef Booking Details";
+            Msg.Body = "Dear Customer. You have Booked a Chef for " + CuisineType + " " + "Occasion: " + Occasionvalue + " for " + EventsType + " Event. RefNo:" + RefNo + "";
             Msg.IsBodyHtml = true;
             // your remote SMTP server IP.
             SmtpClient smtp = new SmtpClient();
