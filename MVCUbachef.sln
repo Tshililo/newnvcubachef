@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCUbachef", "MVCUbachef\MVCUbachef.csproj", "{2B423AB7-E266-49E1-8F5B-C0A85F29FBF2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{17D50B69-3769-406A-AC94-27C441CA6C3F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{42908ED6-68DC-4C8B-B5BA-58A256956ADE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{7742243B-5F8B-474E-8DA6-3B33D712AF04}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Templates\MVCUbachef.json = PublishScripts\Templates\MVCUbachef.json
+		PublishScripts\Templates\MVCUbachef.param.dev.json = PublishScripts\Templates\MVCUbachef.param.dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B423AB7-E266-49E1-8F5B-C0A85F29FBF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B423AB7-E266-49E1-8F5B-C0A85F29FBF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B423AB7-E266-49E1-8F5B-C0A85F29FBF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B423AB7-E266-49E1-8F5B-C0A85F29FBF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{42908ED6-68DC-4C8B-B5BA-58A256956ADE} = {17D50B69-3769-406A-AC94-27C441CA6C3F}
+		{7742243B-5F8B-474E-8DA6-3B33D712AF04} = {17D50B69-3769-406A-AC94-27C441CA6C3F}
+	EndGlobalSection
+EndGlobal
