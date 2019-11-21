@@ -47,17 +47,17 @@
                 <div class="slider-container">
                     <div id="camera_wrap">
 
-                        <div data-src="assets/images/CLASSICBBQ/1.jpg" width="100%">
+                        <div data-src="assets/images/PaymentMethods/1.png" width="100%">
                             <div class="camera_caption fadeFromBottom">
                             </div>
                         </div>
 
-                        <div data-src="assets/images/CLASSICBBQ/2.jpg" width="100%">
+                        <div data-src="assets/images/PaymentMethods/2.jpg" width="100%">
                             <div class="camera_caption fadeFromBottom" width="100%">
                             </div>
                         </div>
 
-                        <div data-src="assets/images/CLASSICBBQ/3.jpg" width="100%">
+                        <div data-src="assets/images/PaymentMethods/3.png" width="100%">
                             <div class="camera_caption fadeFromBottom" width="100%">
                             </div>
                         </div>
@@ -69,14 +69,21 @@
                 </div>
                 <br class="clear" />
             </div><!-- /slider -->
-            <section>
-                <h2>Payment information</h2>
+            <section style="text-align:center">
+                <h2>Booking information</h2>
 
-                <label>
-                    <span>Booking RefNo : @ViewBag.RefNo</span>
-                </label>
+                <h3>Booking RefNo : @ViewBag.RefNo</h3>
 
-                <p>
+                <h4> Banking Details will be sent via Email and through SMS</h4>
+
+                <h4> Please send proof of payment here: payments@ubachef.co.za</h4>
+
+                <h4> For Enquiries: Enquiry@ubachef.co.za</h4>
+                @*<label > 
+                    <span >Booking RefNo : @ViewBag.RefNo</span>
+                </label>*@
+
+                @*<p>
                     <label for="card">
                         <span>Payment Type:</span>
                     </label>
@@ -86,7 +93,7 @@
                         <option value="Visa">Visa</option>
                         <option value="Mastercard">Mastercard</option>
                     </select>
-                </p>
+                </p>*@
 
                 @*<p>
                         <label for="number">
@@ -104,9 +111,9 @@
                         <input type="date" id="date" name="expiration">
                     </p>*@
 
-                <p>
+                @*<p>
                     <input type="button" id="Request" onclick="myFunction()" value="Pay Now" name="Request">
-                </p>
+                </p>*@
             </section>
 
         </div><!-- /content -->

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ubachefModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="booking">
+    <Key>
+      <PropertyRef Name="ObjId" />
+    </Key>
+    <Property Name="ObjId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="people" Type="nvarchar" MaxLength="3" />
+    <Property Name="plates" Type="nvarchar" MaxLength="3" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="occasion" Type="nvarchar" MaxLength="50" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="datecapture" Type="datetime" Nullable="false" />
+    <Property Name="event" Type="nvarchar" MaxLength="50" />
+    <Property Name="cuisinetype" Type="nvarchar" MaxLength="50" />
+    <Property Name="phoneno" Type="nvarchar" MaxLength="50" />
+    <Property Name="refno" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="address" Type="nvarchar" MaxLength="300" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ubachefModelStoreContainer">
+    <EntitySet Name="booking" EntityType="Self.booking" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

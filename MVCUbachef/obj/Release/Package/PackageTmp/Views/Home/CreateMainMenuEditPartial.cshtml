@@ -101,18 +101,59 @@
             }
 
 
+            @if (ViewBag.CuizineType == "EXECUTIVE STEAK")
+            {
+                <!-- slider -->
+                <div class="slider-outer">
+                    <div class="slider-container">
+                        <div id="camera_wrap">
+
+                            <div data-src="assets/images/ExecutiveSteak/1.jpg" width="100%">
+                                <div class="camera_caption fadeFromBottom">
+                                </div>
+                            </div>
+
+                            <div data-src="assets/images/ExecutiveSteak/2.jpg" width="100%">
+                                <div class="camera_caption fadeFromBottom" width="100%">
+                                </div>
+                            </div>
+
+                            <div data-src="assets/images/ExecutiveSteak/3.jpg" width="100%">
+                                <div class="camera_caption fadeFromBottom" width="100%">
+                                </div>
+                            </div>
+
+                            <!--<div data-src="assets/images/headers/4.jpg">
+                    </div>-->
+
+                        </div>
+                    </div>
+                    <br class="clear" />
+                </div>
+                <!-- /slider -->
+            }
+
+
             <section>
                 <h2>Booking information</h2>
 
                 <input type="hidden" id="CuizineTypeId"  name="CuizineTypeId" value="@ViewBag.CuizineType" />
+
+                <label for="pricevalueId">
+                    <span>Price:</span>
+                </label>
+                <input  id="pricevalueId" name="pricevalueId" value="" disabled>
+
 
                 <p>
                     <label for="People">
                         <span>People:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="number" id="People" name="People">
+                    <input type="number" id="People" onchange="OnPeopleChange()" name="People">
                 </p>
+
+                <p id="TotalPriceId"></p>
 
                 <p>
                     <label for="numberofplates ">
@@ -145,6 +186,14 @@
                     </select>
                 </p>
 
+                <p>
+                    <label for="AddressId">
+                        <span>Event Address:</span>
+
+                    </label>
+                    <input type="text" id="AddressId" name="AddressId">
+                </p>
+
 
                 <p>
                     <label for="emailId">
@@ -156,37 +205,11 @@
 
                 <p>
                     <label for="phoneNo">
-                        <span>phoneNo:</span>
+                        <span>phoneNo:(start with country code e.g +27)</span>
 
                     </label>
                     <input type="tel" id="phoneNo" name="phoneNo">
                 </p>
-
-                @*<p>
-                        <label for="card">
-                            <span>Card type:</span>
-                        </label>
-                        <select id="card" name="usercard">
-                            <option value="visa">Visa</option>
-                            <option value="mc">Mastercard</option>
-                            <option value="amex">American Express</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="number">
-                            <span>Card number:</span>
-                            <strong><abbr title="required">*</abbr></strong>
-                        </label>
-                        <input type="tel" id="number" name="cardnumber">
-                    </p>
-                    <p>
-                        <label for="date">
-                            <span>Expiration date:</span>
-                            <strong><abbr title="required">*</abbr></strong>
-                            <em>formatted as mm/yy</em>
-                        </label>
-                        <input type="date" id="date" name="expiration">
-                    </p>*@
 
                 <p>
                     <input type="button" id="Request" onclick="myFunction()" value="Request Chef" name="Request">
@@ -214,24 +237,76 @@
             var numberofplates = document.getElementById("numberofplates").value;
             var emailId = document.getElementById("emailId").value;
             var phoneNo = document.getElementById("phoneNo").value;
-
+            var AddressId = document.getElementById("AddressId").value;
+            var TotalPriceId = document.getElementById("pricevalueId").value;
             var CuizineTypeId = document.getElementById("CuizineTypeId").value;
-
             var e = document.getElementById("EventId");
             var EventIdValue = e.options[e.selectedIndex].value;
-            //alert(e); //ID002
-            
 
             var ee = document.getElementById("OccasionId");
             var OccasionIdValue = ee.options[ee.selectedIndex].value;
-      
-           // alert(CuizineType) //ID002
 
-            var MyIdInfo = PeopleId + "," + numberofplates + "," + emailId + "," + phoneNo + "," + OccasionIdValue + "," + EventIdValue + "," + CuizineTypeId;
+            var MyIdInfo = PeopleId + "," + numberofplates + "," + emailId + "," + phoneNo + "," + OccasionIdValue + "," + EventIdValue + "," + CuizineTypeId + "," + AddressId + "," + TotalPriceId + "";
 
             window.location.href = "/Home/SavePayments?PeopleId=" + MyIdInfo;
 
         }
+
+        function OnPeopleChange() {
+            var PeopleId = document.getElementById("People").value;
+            var CuizineTypeId = document.getElementById("CuizineTypeId").value;
+            
+           
+            var results = parseInt(document.getElementById("People").value);
+
+
+            if (CuizineTypeId == "CLASSIC BBQ")
+            {
+                if (results < 10) {
+    
+                    document.getElementById("pricevalueId").value = "R250.00";
+
+                }
+
+                else {
+           
+                    document.getElementById("pricevalueId").value = "R200.00";
+
+                }
+
+            }
+
+            if (CuizineTypeId == "PLATTERS") {
+                if (results < 10) {
+                    document.getElementById("pricevalueId").value = "R300.00";
+
+                }
+
+                else {
+                    document.getElementById("pricevalueId").value = "R250.00";
+
+                }
+
+            }
+
+            if (CuizineTypeId == "EXECUTIVE STEAK") {
+                if (results < 10) {
+                  
+                    document.getElementById("pricevalueId").value = "R300.00";
+
+                }
+
+                else {
+          
+                    document.getElementById("pricevalueId").value = "R350.00";
+
+                }
+
+            }
+
+                 }
+
+        
     </script>
 
 </body>

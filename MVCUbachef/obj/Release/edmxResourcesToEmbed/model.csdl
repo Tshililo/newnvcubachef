@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ubachefModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="booking">
+    <Key>
+      <PropertyRef Name="ObjId" />
+    </Key>
+    <Property Name="ObjId" Type="Guid" Nullable="false" />
+    <Property Name="people" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="plates" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="occasion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="datecapture" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="event" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cuisinetype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phoneno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="refno" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="address" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ubachefEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="bookings" EntityType="Self.booking" />
+  </EntityContainer>
+</Schema>

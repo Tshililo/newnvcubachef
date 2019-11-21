@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace MVCUbachef.Models
@@ -8,6 +9,31 @@ namespace MVCUbachef.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+    }
+
+    public class booking
+    {
+        public Guid? ObjId { get; set; }
+
+        public string people { get; set; }
+        public string email { get; set; }
+        public string occasion { get; set; }
+        public string datecapture { get; set; }
+        public string EventsType { get; set; }
+        public string cuisinetype { get; set; }
+        public string phoneno { get; set; }
+        public string refno { get; set; }
+        public string address { get; set; }
+
+        public string FromTime { get; set; }
+
+        public string ToTime { get; set; }
+
+        public string RequestDate { get; set; }
+
+        public string Accepted { get; set; }
+
+        
     }
 
     public class ExternalLoginListViewModel

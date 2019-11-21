@@ -19,6 +19,7 @@
 @import url(http://fonts.googleapis.com/css?family=Cardo:400,700); /* font-family: 'Cardo', serif; */
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700italic,700); /* font-family: 'Droid Serif', serif; */
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700); /* font-family: 'Droid Sans', sans-serif; */
+@import "lesshat";
 
    
 /* =============================================================================
@@ -42,6 +43,8 @@ h3.home-title {
 	padding: 20px 0
 }
 
+
+
 .gal-description {
 	font-size:11px; 
 	color: #eee
@@ -51,6 +54,8 @@ h3.home-title {
 	padding-left:15px;
 	margin-bottom:3px
 }
+
+
 
 hr.ornamental { 
 	background:url(../images/ornamental-sm.png) center no-repeat; 

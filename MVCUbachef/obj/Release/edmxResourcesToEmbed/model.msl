@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ubachefModelStoreContainer" CdmEntityContainer="ubachefEntities">
+    <EntitySetMapping Name="bookings">
+      <EntityTypeMapping TypeName="ubachefModel.booking">
+        <MappingFragment StoreEntitySet="booking">
+          <ScalarProperty Name="ObjId" ColumnName="ObjId" />
+          <ScalarProperty Name="people" ColumnName="people" />
+          <ScalarProperty Name="plates" ColumnName="plates" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="occasion" ColumnName="occasion" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="datecapture" ColumnName="datecapture" />
+          <ScalarProperty Name="event" ColumnName="event" />
+          <ScalarProperty Name="cuisinetype" ColumnName="cuisinetype" />
+          <ScalarProperty Name="phoneno" ColumnName="phoneno" />
+          <ScalarProperty Name="refno" ColumnName="refno" />
+          <ScalarProperty Name="address" ColumnName="address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

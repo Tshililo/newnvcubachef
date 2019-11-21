@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-MVCUbachef-20191027072750.mdf;Initial Catalog=aspnet-MVCUbachef-20191027072750;Integrated Security=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="c:\\users\\tshililo\\documents\\visual\ studio\ 2015\\Projects\\MVCUbachef\\MVCUbachef\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Tshililo\\Documents\\Visual\ Studio\ 2015\\Projects\\MVCUbachef\\MVCUbachef\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="ubachefEntities-Web.config Connection String" description="ubachefEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/model.csdl|res://*/model.ssdl|res://*/model.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=ubachef.database.windows.net;initial catalog=ubachef;persist security info=True;user id=Ubachef;password=Mutheiwana27;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Tshililo\\Documents\\Visual\ Studio\ 2015\\Projects\\MVCUbachef\\MVCUbachef\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ubachefEntities']/@connectionString" />
   </parameter>
 </parameters>
